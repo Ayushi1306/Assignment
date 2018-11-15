@@ -1,0 +1,13 @@
+import jsonschema 
+import simplejson as json
+
+with open('family.json','r') as f:
+    schema_data = f.read()
+schema = json.loads(schema_data)
+
+
+json_obj = {"name":"Prakash","age":"9","child":[]}
+jsonschema.validate(json_obj,schema)
+
+json_obj = {"name":"Prakash","age":"9","child":[]}
+jsonschema.validate(json_obj,schema)
